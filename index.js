@@ -27,10 +27,6 @@ function filterById(id, data, res) {
     return res.send({ message: 'No Record Found!' });
   }
   return res.json({
-    data: {
-      id: result[0].id,
-      fullName: result[0].fullName,
-      title: result[0].title,
-      numberOfDogs: result[0].numberOfDogs
-  } });
+    data: result[0]
+  });
 }
